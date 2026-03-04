@@ -12,11 +12,16 @@ function getRandomQuote() {
   return quotes[randomNumber]
 }
 
+// Decides a random color 
+function randomColor(min, max) {
+  return Math.floor( Math.random() * (max - min + 1)) + min;
+}
+
 function printQuote() {
-  // Define random values for the backgroundColor
-  let r1 = Math.floor( Math.random() * 255 )
-  let r2 = Math.floor( Math.random() * 255 )
-  let r3 = Math.floor( Math.random() * 255 )
+  // Sets a random color to be used as the background.
+  let r1 = randomColor(100,200);
+  let r2 = randomColor(100,200);
+  let r3 = randomColor(100,200);
 
   randQuote = getRandomQuote();
 
